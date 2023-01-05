@@ -15,12 +15,12 @@ public class DataProcessor {
         return top3;
     }
 
-    public static Film searchRating(ArrayList<Film> list, int price) throws NegativeInput {
-        if (price < 0) { throw new NegativeInput("positive number expected"); }
+    public static Film searchRating(ArrayList<Film> list, int rating) throws NegativeInput {
+        if (rating < 0) { throw new NegativeInput("positive number expected"); }
 
-        List<Film> exactPrice = list.stream()
-                .filter(element -> element.rating == price).toList();
+        List<Film> exactRating = list.stream()
+                .filter(element -> element.rating == rating).toList();
 
-        return exactPrice.get(0);
+        return exactRating.get(0);
     }
 }
