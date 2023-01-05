@@ -138,18 +138,13 @@ public class Main {
 
         // Printing data of all the objects included in the media.
         System.out.println("## Перечисление всех объектов:");
-        for (int i = 0; i < filmsAmount + seriesAmount + gamesAmount; i++) {
-            media.get(i).printInfo();
-        }
+        for (int i = 0; i < filmsAmount + seriesAmount + gamesAmount; i++) media.get(i).printInfo();
         System.out.println();
 
         // Printing a Top-3 among films and series.
-        filmsAndSeries.sort(Comparator.comparing(Media::getRating).reversed());
         List<Film> rating = DataProcessor.top3Rating(filmsAndSeries);
         System.out.println("## Вывод Топ-3 лучших фильмов/сериалов:");
-        for (Film film : rating) {
-            film.printInfo();
-        }
+        for (Film film : rating) film.printInfo();
         System.out.println();
 
         // Searching for the requested rating among films and series and taking the first one found.
