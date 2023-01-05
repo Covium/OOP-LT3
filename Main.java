@@ -154,7 +154,7 @@ public class Main {
 
         // Searching for the requested rating among films and series and taking the first one found.
         System.out.println("## Поиск первого встреченного объекта по рейтингу: ");
-        System.out.print("Введите цену: ");
+        System.out.print("Введите рейтинг: ");
         while (true) {
             try {
                 Scanner scanner = new Scanner(System.in);
